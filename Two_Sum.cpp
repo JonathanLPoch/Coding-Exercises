@@ -7,6 +7,8 @@ using namespace std;
 
 class Solution{
 public:
+  // O(n^2) time
+  // O(1) space
 	vector<int> twoSum(vector<int>& nums, int target) {
     vector<int> indices;
 		for(int i = 0; i < nums.size(); i++) {
@@ -21,6 +23,8 @@ public:
     return indices;
 	}
   
+  // O(n log n) time
+  // O(1) space
   vector<int> twoSumV2(vector<int>& nums, int target) {
     vector<int> ret = vector<int>(2);
     unordered_map<int,int> m;

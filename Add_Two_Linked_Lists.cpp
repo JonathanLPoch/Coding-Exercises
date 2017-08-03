@@ -10,13 +10,14 @@ struct ListNode {
 
 class Solution {
 public:
+  //O(max size(l1, l2) time
+  //O(max size(l1, l2) space
   ListNode* addTwoNumbers(ListNode *l1, ListNode *l2) {
     ListNode* l = new ListNode((l1->val + l2->val)%10);
     ListNode* tempL = l;
     ListNode* temp1 = l1->next;
     ListNode* temp2 = l2->next;
     int carryOver = (l1->val + l2->val)/10;
-    
     while(temp1 || temp2 || carryOver) {
       if(temp1 && temp2) {
         if(temp1->val + temp2->val + carryOver > 9) {
